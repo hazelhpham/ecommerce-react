@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { mobile } from "../responsive";
+
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -16,6 +19,7 @@ const Wrapper = styled.div`
   width: 25%;
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.5);
+  ${mobile({ width: "75%" })}
 `;
 const Form = styled.div`
   flex: 1;
@@ -49,7 +53,7 @@ const Button = styled.button`
   cursor: pointer;
   margin-top: 8px;
 `;
-const Link = styled.a`
+const Login_Link = styled.a`
   text-decoration: underline;
   cursor: pointer;
   font-size: 15px;
@@ -58,18 +62,21 @@ const Link = styled.a`
 
 const Login = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Form>
-          <Title> SIGN IN </Title>
-          <Input placeholder="username" />
-          <Input placeholder="password" />
-          <Button> Login</Button>
-          <Link> Forget your password? </Link>
-          <Link> Create a new one here! </Link>
-        </Form>
-      </Wrapper>
-    </Container>
+    <div>
+      <Container>
+        <Wrapper>
+          <Form>
+            <Title> SIGN IN </Title>
+            <Input placeholder="username" />
+            <Input placeholder="password" />
+            <Button> Login</Button>
+            <Login_Link> Forget your password? </Login_Link>
+            <Login_Link> Create a new one here! </Login_Link>
+          </Form>
+        </Wrapper>
+      </Container>
+      <Link to="/">return</Link>
+    </div>
   );
 };
 

@@ -4,22 +4,19 @@ import Product from "./Pages/Product";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Cart from "./Pages/Cart";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 const App = () => {
   return (
-    <div>
-      <Home />
-      <main>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/productlist" element={<ProductList />} />
-        </Routes>
-      </main>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/product-list" component={ProductList} />
+        <Route path="/product" component={Product} />
+        <Route path="/register" component={Register} />
+        <Route path="/log-in" component={Login} />
+        <Route path="/cart" component={Cart} />
+      </Switch>
+    </Router>
   );
 };
 

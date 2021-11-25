@@ -3,13 +3,15 @@ import styled from "styled-components";
 import { useState } from "react";
 import { sliderItems } from "../data";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
-
+import { Link } from "react-router-dom";
+import { mobile } from "../responsive";
 const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
   background-color: coral;
   position: relative;
+  ${mobile({ display: "none" })};
 `;
 const Arrow = styled.div`
   width: 50px;
@@ -94,7 +96,10 @@ const Slider = () => {
               <InfoContainer>
                 <Title> {item.title} </Title>
                 <Desc> {item.desc} </Desc>
-                <Button> SHOW NOW </Button>
+                <Link to="/product-list">
+                  {" "}
+                  <Button> SHOW NOW </Button>{" "}
+                </Link>
               </InfoContainer>
             </Slide>
           ))}

@@ -101,7 +101,7 @@ const NavBar = () => {
           {" "}
           <Link to="/">
             {" "}
-            <Logo> LAMA </Logo>{" "}
+            <Logo> SLEIN </Logo>{" "}
           </Link>
         </Center>
         <Right>

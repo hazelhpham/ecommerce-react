@@ -85,7 +85,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>LAMA</Logo>
+        <Logo>SLEIN</Logo>
         <Description>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
           dicta ratione eveniet ex veniam dolore tenetur iure explicabo ipsa
